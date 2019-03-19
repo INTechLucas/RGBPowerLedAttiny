@@ -114,6 +114,27 @@
   <wire x1="7.68" y2="3.11" layer="21" y1="3.11" width="0.2" x2="-2.6"/>
   <wire x1="-2.6" y2="0" layer="21" y1="3.11" width="0.2" x2="-2.6"/>
  </package>
+ <package name="TO254P469X1042X1967-3P">
+  <description>&lt;b>TO-220AB_5&lt;/b>&lt;br>&#xd;
+</description>
+  <pad name="1" x="0" shape="square" drill="1.28" y="0" diameter="1.92"/>
+  <pad name="2" x="2.54" drill="1.28" y="0" diameter="1.92"/>
+  <pad name="3" x="5.08" drill="1.28" y="0" diameter="1.92"/>
+  <text rot="R0" size="1.27" align="center" layer="25" x="0" y="0">>NAME</text>
+  <text rot="R0" size="1.27" align="center" layer="27" x="0" y="0">>VALUE</text>
+  <wire x1="-2.98" y2="3.445" layer="51" y1="3.445" width="0.05" x2="8.06"/>
+  <wire x1="8.06" y2="-1.745" layer="51" y1="3.445" width="0.05" x2="8.06"/>
+  <wire x1="8.06" y2="-1.745" layer="51" y1="-1.745" width="0.05" x2="-2.98"/>
+  <wire x1="-2.98" y2="3.445" layer="51" y1="-1.745" width="0.05" x2="-2.98"/>
+  <wire x1="-2.73" y2="3.195" layer="51" y1="3.195" width="0.1" x2="7.81"/>
+  <wire x1="7.81" y2="-1.495" layer="51" y1="3.195" width="0.1" x2="7.81"/>
+  <wire x1="7.81" y2="-1.495" layer="51" y1="-1.495" width="0.1" x2="-2.73"/>
+  <wire x1="-2.73" y2="3.195" layer="51" y1="-1.495" width="0.1" x2="-2.73"/>
+  <wire x1="-2.73" y2="3.195" layer="51" y1="1.925" width="0.1" x2="-1.46"/>
+  <wire x1="7.81" y2="3.195" layer="21" y1="-1.495" width="0.2" x2="7.81"/>
+  <wire x1="7.81" y2="3.195" layer="21" y1="3.195" width="0.2" x2="-2.73"/>
+  <wire x1="-2.73" y2="0" layer="21" y1="3.195" width="0.2" x2="-2.73"/>
+ </package>
 </packages>
 <symbols>
  <symbol name="ATTINY45-20PU">
@@ -142,6 +163,29 @@
   <pin name="INPUT" rot="R0" length="middle" direction="in" x="0" y="0"/>
   <pin name="GROUND" rot="R0" length="middle" direction="pwr" x="0" y="-2.54"/>
   <pin name="OUTPUT" rot="R180" length="middle" direction="out" x="33.02" y="0"/>
+ </symbol>
+ <symbol name="IRF540NPBF">
+  <wire x1="7.62" y2="-2.54" layer="94" y1="2.54" width="0.254" x2="7.62"/>
+  <wire x1="7.62" y2="7.62" layer="94" y1="5.08" width="0.254" x2="7.62"/>
+  <wire x1="2.54" y2="0" layer="94" y1="0" width="0.254" x2="5.08"/>
+  <wire x1="5.08" y2="0" layer="94" y1="5.08" width="0.254" x2="5.08"/>
+  <wire x1="7.62" y2="2.54" layer="94" y1="2.54" width="0.254" x2="5.842"/>
+  <wire x1="7.62" y2="5.08" layer="94" y1="5.08" width="0.254" x2="5.842"/>
+  <wire x1="5.842" y2="0" layer="94" y1="0" width="0.254" x2="7.62"/>
+  <wire x1="5.842" y2="4.572" layer="94" y1="5.588" width="0.254" x2="5.842"/>
+  <wire x1="5.842" y2="0.508" layer="94" y1="-0.508" width="0.254" x2="5.842"/>
+  <wire x1="5.842" y2="3.048" layer="94" y1="2.032" width="0.254" x2="5.842"/>
+  <circle radius="3.81" layer="94" width="0.254" x="6.35" y="2.54"/>
+  <text size="1.778" align="center-left" layer="95" x="11.43" y="3.81">>NAME</text>
+  <text size="1.778" align="center-left" layer="96" x="11.43" y="1.27">>VALUE</text>
+  <pin name="G" rot="R0" length="short" direction="io" x="0" visible="pad" y="0"/>
+  <pin name="D" rot="R270" length="short" direction="io" x="7.62" visible="pad" y="10.16"/>
+  <pin name="S" rot="R90" length="short" direction="io" x="7.62" visible="pad" y="-5.08"/>
+  <polygon layer="94" width="0.254">
+   <vertex x="5.842" y="2.54"/>
+   <vertex x="6.858" y="3.048"/>
+   <vertex x="6.858" y="2.032"/>
+  </polygon>
  </symbol>
 </symbols>
 <devicesets>
@@ -203,6 +247,34 @@ Source: &lt;a href="http://www.onsemi.com/pub_link/Collateral/MC7800-D.PDF"> Dat
       <attribute name="Allied_Price-Stock" constant="no" value="http://www.alliedelec.com/on-semiconductor-mc7805btg/70099955/"/>
       <attribute name="Description" constant="no" value="Voltage regulator,MC7805BT 5V 1A ON Semiconductor MC7805BTG, Single Linear Voltage Regulator, 1A 5 V, +/-4%, 3-Pin TO-220"/>
       <attribute name="Height" constant="no" value="4.82mm"/>
+     </technology>
+    </technologies>
+   </device>
+  </devices>
+ </deviceset>
+ <deviceset name="IRF540NPBF" prefix="Q">
+  <description>&lt;b>MOSFET N-Channel 100V 33A TO220AB International Rectifier IRF540NPBF N-channel MOSFET Transistor, 33 A, 100 V, 3-Pin TO-220AB&lt;/b>&lt;p>&#xd;
+Source: &lt;a href="https://www.infineon.com/dgdl/irf540n.pdf?fileId=5546d462533600a4015355e396cb199f"> Datasheet &lt;/a></description>
+  <gates>
+   <gate name="G$1" symbol="IRF540NPBF" x="0" y="0"/>
+  </gates>
+  <devices>
+   <device name="" package="TO254P469X1042X1967-3P">
+    <connects>
+     <connect pin="G" gate="G$1" pad="1"/>
+     <connect pin="D" gate="G$1" pad="2"/>
+     <connect pin="S" gate="G$1" pad="3"/>
+    </connects>
+    <technologies>
+     <technology name="">
+      <attribute name="Manufacturer_Name" constant="no" value="International Rectifier"/>
+      <attribute name="Manufacturer_Part_Number" constant="no" value="IRF540NPBF"/>
+      <attribute name="Mouser_Part_Number" constant="no" value=""/>
+      <attribute name="Mouser_Price-Stock" constant="no" value=""/>
+      <attribute name="RS_Part_Number" constant="no" value="2509058159"/>
+      <attribute name="RS_Price-Stock" constant="no" value="http://uk.rs-online.com/web/p/products/2509058159"/>
+      <attribute name="Description" constant="no" value="MOSFET N-Channel 100V 33A TO220AB International Rectifier IRF540NPBF N-channel MOSFET Transistor, 33 A, 100 V, 3-Pin TO-220AB"/>
+      <attribute name="Height" constant="no" value="4.69mm"/>
      </technology>
     </technologies>
    </device>
